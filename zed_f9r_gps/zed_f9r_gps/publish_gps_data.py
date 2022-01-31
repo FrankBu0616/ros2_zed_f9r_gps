@@ -19,9 +19,18 @@ class GPSPublisher(Node):
             while True:
                 try:
                     geo = self.gps.geo_coords()
+                    cov = self.gps.geo_cov()
                     msg = NavSatFix()
                     msg.longitude = geo.lon
                     msg.latitude = geo.lat
+                    msg.altitude = float(geo.height)
+                    NN = cov.posCovNN
+                    NE = cov.posCovNE
+                    ND = cov.posCovND
+                    EE = cov.posCovEE
+                    ED = cov.posCovED
+                    DD = cov.posCovDD
+                    msg.position_covariance = [EE, NE, ED, NE, NN, ND, ED, ND, DD]
                     self.publisher_.publish(msg)
                 except (ValueError, IOError) as err:
                     print(err)
