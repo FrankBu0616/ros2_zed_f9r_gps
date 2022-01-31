@@ -30,6 +30,7 @@ class GPSPublisher(Node):
                     EE = cov.posCovEE
                     ED = cov.posCovED
                     DD = cov.posCovDD
+                    # Following the convention here: https://www.ros.org/reps/rep-0105.html
                     msg.position_covariance = [EE, NE, ED, NE, NN, ND, ED, ND, DD]
                     self.publisher_.publish(msg)
                 except (ValueError, IOError) as err:
