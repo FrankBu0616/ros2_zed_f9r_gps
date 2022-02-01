@@ -50,7 +50,7 @@ The default package does not provide functions to parse GPS covariance matrix, b
 In `/usr/local/lib/Python3.x/dist-packages/ublox_gps`,
 after function `geo_coords()` on line 196, add another function that parse the covariance.
 
-```
+<pre>
 def geo_coords(self):
     # Here we change the message type to COV
     self.send_message(sp.NAV_CLS, self.nav_ms.get('COV'))
@@ -58,7 +58,7 @@ def geo_coords(self):
     cls_name, msg_name, payload = parse_tool.receive_from(self.hard_port)
     # There is no scaling factor so we can just return the payload
     return payload
-```
+<\pre>
 
 Details on ublox messages can be found [here](https://www.u-blox.com/sites/default/files/u-blox-F9-HPG-1.30_InterfaceDescription_UBX-21046737.pdf).
 
