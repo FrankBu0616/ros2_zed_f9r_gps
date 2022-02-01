@@ -58,7 +58,7 @@ def geo_coords(self):
     cls_name, msg_name, payload = parse_tool.receive_from(self.hard_port)
     # There is no scaling factor so we can just return the payload
     return payload
-<\pre>
+</pre>
 
 Details on ublox messages can be found [here](https://www.u-blox.com/sites/default/files/u-blox-F9-HPG-1.30_InterfaceDescription_UBX-21046737.pdf).
 
