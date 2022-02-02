@@ -23,7 +23,7 @@ class GPSPublisher(Node):
                     msg = NavSatFix()
                     msg.longitude = geo.lon
                     msg.latitude = geo.lat
-                    msg.altitude = float(geo.height)
+                    msg.altitude = 0.001 * float(geo.height)
                     NN = cov.posCovNN
                     NE = cov.posCovNE
                     ND = cov.posCovND
