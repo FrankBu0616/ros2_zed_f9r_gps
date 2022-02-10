@@ -4,7 +4,7 @@ This is guide on streaming GPS data from SparkFun GPS-RTK Dead Reckoning pHAT fo
 
 ## Install Ubuntu 20.04 on raspberry pi.
 ---
-There is no official image for ubuntu 20.04 desktop for raspberry pi. However, you can install [ubuntu 20.04 server](https://ubuntu.com/download/raspberry-pi) and then install ubuntu-desktop `sudo apt-get install ubuntu-desktop`.
+There is no official image for ubuntu 20.04 desktop for raspberry pi. However, you can install [ubuntu 20.04 server](https://ubuntu.com/download/raspberry-pi) and then install ubuntu-desktop `sudo apt-get install ubuntu-desktop`. [Update: It seems that Lubuntu Desktop is more stable operation on a raspberry pi, I used [desktopify](https://github.com/wimpysworld/desktopify) to install Lubuntu Desktop on my ubuntu server.]
 
 ## Enable UART on raspberry pi for Ubuntu
 ---
