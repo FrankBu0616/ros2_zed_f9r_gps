@@ -51,7 +51,7 @@ In `/usr/local/lib/Python3.x/dist-packages/ublox_gps`,
 after function `geo_coords()` on line 196, add another function that parse the covariance.
 
 <pre>
-def geo_coords(self):
+def geo_cov(self):
     # Here we change the message type to COV
     self.send_message(sp.NAV_CLS, self.nav_ms.get('COV'))
     parse_tool = core.Parser([sp.NAV_CLS])
