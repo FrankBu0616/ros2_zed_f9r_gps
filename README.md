@@ -41,9 +41,9 @@ Reload udev rules: `sudo udevadm control --reload-rules && sudo udevadm trigger`
 
 ## Download ublox python package and customize
 ---
-Download sparkfun ublox package. (Requires Python3 and pip3.)
-
-```sudo pip install sparkfun-ublox-gps```
+Download sparkfun ublox package. (Requires Python3 and pip3, spidev.)
+```sudo pip3 install spidev```
+```sudo pip3 install sparkfun-ublox-gps```
 
 The default package does not provide functions to parse GPS covariance matrix, but we can easily add our own.
 
@@ -73,6 +73,7 @@ cd [your_ros_ws]/src
 git clone https://github.com/FrankBu0616/ros2_zed_f9r_gps.git
 cd ..
 colcon build
+source install/setup.bash
 ```
 
 To start publishing data, `ros2 run zed_f9r_gps gps_publisher`.
